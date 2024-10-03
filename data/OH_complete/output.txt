@@ -1,0 +1,39 @@
+<+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+>
+<+>                     UNITED STATES OF AMERICA                     <+>
+<+>                    BUREAU OF LABOR STATISTICS                    <+>
+<+>             Quarterly Census of Employment and Wages             <+>
+<+>                 Annual Report For The Year 2023                  <+>
+<+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+>
+
+Statistics over all industries
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Number of FIPS areas in report       89
+
+Total annual wages                   $345,699,536,711
+Area with maximum annual wages       Franklin County, Ohio
+Maximum reported wages               $54,168,059,645
+
+Total number of establishments       336,501
+Area with most establishments        Franklin County, Ohio
+Maximum # of establishments          39,300
+
+Total annual employment level        5,480,038
+Area with maximum employment         Franklin County, Ohio
+Maximum reported employment level    772,337
+
+
+Statistics over the software publishing industry
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Number of FIPS areas in report       78
+
+Total annual wages                   $1,368,416,860
+Area with maximum annual wages       Unknown Or Undefined, Ohio
+Maximum reported wages               $293,403,696
+
+Total number of establishments       2,906
+Area with most establishments        Unknown Or Undefined, Ohio
+Maximum # of establishments          859
+
+Total annual employment level        11,030
+Area with maximum employment         Unknown Or Undefined, Ohio
+Maximum reported employment level    2,033

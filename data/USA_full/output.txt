@@ -1,0 +1,39 @@
+<+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+>
+<+>                     UNITED STATES OF AMERICA                     <+>
+<+>                    BUREAU OF LABOR STATISTICS                    <+>
+<+>             Quarterly Census of Employment and Wages             <+>
+<+>                 Annual Report For The Year 2023                  <+>
+<+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+>
+
+Statistics over all industries
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Number of FIPS areas in report       3,274
+
+Total annual wages                   $11,111,146,660,445
+Area with maximum annual wages       New York County, New York
+Maximum reported wages               $380,895,670,335
+
+Total number of establishments       11,923,860
+Area with most establishments        Los Angeles County, California
+Maximum # of establishments          545,376
+
+Total annual employment level        154,078,867
+Area with maximum employment         Los Angeles County, California
+Maximum reported employment level    4,470,309
+
+
+Statistics over the software publishing industry
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Number of FIPS areas in report       1,889
+
+Total annual wages                   $127,153,065,249
+Area with maximum annual wages       King County, Washington
+Maximum reported wages               $22,260,352,761
+
+Total number of establishments       88,826
+Area with most establishments        New York County, New York
+Maximum # of establishments          2,122
+
+Total annual employment level        628,631
+Area with maximum employment         King County, Washington
+Maximum reported employment level    71,058

@@ -1,0 +1,39 @@
+<+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+>
+<+>                     UNITED STATES OF AMERICA                     <+>
+<+>                    BUREAU OF LABOR STATISTICS                    <+>
+<+>             Quarterly Census of Employment and Wages             <+>
+<+>                 Annual Report For The Year 2023                  <+>
+<+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+>
+
+Statistics over all industries
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Number of FIPS areas in report       18
+
+Total annual wages                   $93,578,587,304
+Area with maximum annual wages       Clark County, Nevada
+Maximum reported wages               $68,052,459,224
+
+Total number of establishments       108,739
+Area with most establishments        Clark County, Nevada
+Maximum # of establishments          64,699
+
+Total annual employment level        1,486,592
+Area with maximum employment         Clark County, Nevada
+Maximum reported employment level    1,098,202
+
+
+Statistics over the software publishing industry
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Number of FIPS areas in report       12
+
+Total annual wages                   $770,645,923
+Area with maximum annual wages       Clark County, Nevada
+Maximum reported wages               $490,843,198
+
+Total number of establishments       1,619
+Area with most establishments        Clark County, Nevada
+Maximum # of establishments          1,156
+
+Total annual employment level        4,923
+Area with maximum employment         Clark County, Nevada
+Maximum reported employment level    3,373
