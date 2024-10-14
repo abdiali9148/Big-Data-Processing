@@ -42,7 +42,7 @@ for line in f:
     animate(lines)
 f.close()
 
-f = open(f"{sys.argv[1]}/2022.annual.singlefile.csv")
+f = open(f"{sys.argv[1]}/2023.annual.singlefile.csv")
 for line in f:
     line.split(",")
     lines += 1
