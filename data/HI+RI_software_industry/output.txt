@@ -24,16 +24,16 @@ Maximum reported employment level    0
 
 Statistics over the software publishing industry
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-Number of FIPS areas in report       5
+Number of FIPS areas in report       11
 
-Total annual wages                   $73,383,442
-Area with maximum annual wages       Honolulu County, Hawaii
-Maximum reported wages               $41,843,296
+Total annual wages                   $208,109,220
+Area with maximum annual wages       Providence County, Rhode Island
+Maximum reported wages               $64,111,508
 
-Total number of establishments       376
+Total number of establishments       716
 Area with most establishments        Honolulu County, Hawaii
 Maximum # of establishments          206
 
-Total annual employment level        432
-Area with maximum employment         Honolulu County, Hawaii
-Maximum reported employment level    257
+Total annual employment level        1,342
+Area with maximum employment         Providence County, Rhode Island
+Maximum reported employment level    450
