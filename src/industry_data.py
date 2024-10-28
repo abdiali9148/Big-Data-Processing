@@ -49,5 +49,8 @@ class IndustryData:
          - Keeps track of the area with the maximum number of establishments.
          - Calculates and accumulates the total employment level.
          - Keeps track of the area with the maximum employment level.
+
+        Read tests/test_industry_data.py to learn what these fields
+        should be called and what types of data they will hold.
         """
         pass

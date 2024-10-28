@@ -37,27 +37,10 @@ print("TODO: Create a dictionary from 'sys.argv[1]/area-titles.csv'")  # DELETE 
 print("TODO: If accessing 'sys.argv[1]/area-titles.csv' fails, let your program crash here")  # DELETE ME
 print("TODO: The FIPS dictionary should contain 3,463 pairs")  # DELETE ME
 
-print("TODO: Fill in the report using information from 'sys.argv[1]/2022.annual.singlefile.csv'")  # DELETE ME
-
-# This is a demonstration of how to fill IndustryData objects with data
+print("TODO: Create a Report object with the current year (don't overcomplicate this; just hard-code it)")  # DELETE ME
 rpt = Report()
 
-rpt.all.num_areas           = 1337
-rpt.all.total_annual_wages  = 13333337
-rpt.all.max_annual_wages    = ["Trantor", 123456]
-rpt.all.total_estabs        = 42
-rpt.all.max_estabs          = ["Terminus", 12]
-rpt.all.total_emplvl        = 987654
-rpt.all.max_emplvl          = ["Anacreon", 654]
-
-rpt.soft.num_areas          = 1010
-rpt.soft.total_annual_wages = 101001110111
-rpt.soft.max_annual_wages   = ["Helicon", 110010001]
-rpt.soft.total_estabs       = 1110111
-rpt.soft.max_estabs         = ["Solaria", 11000]
-rpt.soft.total_emplvl       = 100010011
-rpt.soft.max_emplvl         = ["Gaia", 10110010]
-
+print("TODO: Fill in the report using information from this year's annual singlefile CSV")  # DELETE ME
 
 after = time.time()
 print(f"Done in {after - before:.3f} seconds!", file=sys.stderr)
