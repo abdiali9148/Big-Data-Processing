@@ -17,7 +17,7 @@ I am very particular about the format of your project submissions.
 <summary><strong>Why am I so picky about how you submit your homework?</strong></summary>
 
 0.  **Programming is a detail-oriented activity**.  The sooner you embrace this fact, the happier you will be.
-1.  In the workforce **your boss and coworkers will be just as picky as I am** about how you turn in your work.  Perhaps more so.  It is not good enough if your code "just works" on your computer.  You code needs to "just work" on their computers, too.
+1.  In the workforce **your boss and coworkers will be just as picky as I am** about how you turn in your work.  Perhaps more so.  It is not good enough if your code "just works" on your computer.  Your code needs to "just work" on their computers, too.
 2.  In a large class **every second adds up**.  If it takes 60 seconds for a grader to figure out how to run each student's submission, then in a class of 120 students two hours is spent just getting started.  Since there are five projects in this class, we would spend more than an entire work-day on this trivial task.
 
 </details>
@@ -81,15 +81,15 @@ Your work is submitted by using Git to push code to repositories (a.k.a. "repos"
 
 #### Good repo names:
 
-*   `cs1440-smith-jane-proj1` (Jane Smith's project #1)
+*   `cs1440-osullivan-siobhan-proj1` (Siobhán O'Sullivan's project #1)
 *   `cs1440-jones-bill-proj4` (Bill Jones's project #4)
 *   `cs1440-rubio-gould-teresa-proj2` (Teresa Rubio-Gould's project #2 - multiple surnames are OK)
-*   `cs1440-hardin-kinsley-donovan-proj3` (Kinsley D. Hardin's project #3 submission, includes his middle name to distinguish from the other Kinsley Hardin in this class)
+*   `cs1440-hardin-kinsley-donovan-proj3` (Kinsley D. Hardin's project #3 submission, includes his middle name to distinguish from the other Kinsley Hardin (no relation) in this class)
 
 
 #### Bad repo names:
 
-*   `cs1000-smith-jane-proj1` (wrong course number: this is **cs1440**, not **cs1000**)
+*   `cs1000-osullivan-siobhan-proj1` (wrong course number: this is **cs1440**, not **cs1000**)
 *   `1440-jones-bill-proj4` (invalid course number: it must begin with **cs**)
 *   `cs-1440-jones-bill-proj4` (invalid course number: spell it as **cs1440**, not **cs-1440**)
 *   `cs1440-rubio-gould-teresa-prj2` (**proj#** is spelled wrong)
@@ -305,7 +305,7 @@ Sometimes there are files on your computer that are not committed to Git.  Conse
 An easy way to avoid this is to re-clone your repository from GitLab into a fresh location on your computer and give it one final test from there.  This lets you experience your submission just as the graders will.
 
 0.  In your shell, navigate into a different directory and `git clone` your repository.
-    *   You can find the URL on to clone by running `git remote -v` in your original repository, or on the GitLab website.
+    *   You can find the URL to clone by running `git remote -v` in your original repository, or on the GitLab website.
 1.  Prevent *Gitception* by not `git clone`ing when your shell is already inside a Git repo.
     *   *Always* run `git status` before using `git clone`!  You want it to show you this error:
     *   ```
@@ -323,13 +323,13 @@ An easy way to avoid this is to re-clone your repository from GitLab into a fres
 
 ## Python Version
 
-*   Graders will run your code against the official distribution of Python version 3.8 or greater from https://python.org
+*   Graders will run your code against the official distribution of Python version 3.9 or greater from https://python.org
 *   Python version 2 has reached its end of life.
 *   Code written for Python 2.x is not acceptable in this class.
 
 For this class you must either:
 
-*   Install Python version 3.8 or greater on your own computer
+*   Install Python version 3.9 or greater on your own computer
 *   Find a computer with the correct version of Python
     *   Computers in CS labs and the Engineering Computer lab have the correct version of Python.
 
@@ -340,12 +340,12 @@ Run `python --version` from the command line:
 
 ```
 $ python --version
-Python 3.9.16
+Python 3.13.1
 ```
 
 If this reports a version number beginning with 2, run `python3` instead:
 
 ```
 $ python3 --version
-Python 3.9.16
+Python 3.13.1
 ```

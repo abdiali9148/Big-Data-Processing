@@ -1,14 +1,14 @@
-#            Copyright © 2024 DuckieCorp. All Rights Reserved.
+#               Copyright © DuckieCorp. All Rights Reserved.
 #
 #  Everyone is permitted to copy and distribute verbatim copies of this
-#      license document, but changing or removing it is not allowed.
+#      license document, but changing or removing it isn't allowed.
 #
 #                       __     TERMS AND CONDITIONS
 #                     /` ,\__
 #                    |    ).-' 0. "Copyright" applies to other kinds of
 #                   / .--'        works, such as coin-op arcade machines,
 #                  / /            novelty T-shirts (both offensive and
-#    ,      _.==''`  \            inoffensive), macramé, and warm (but
+#    ,      _.==''`  \            inoffensive), macrame, and warm (but
 #  .'(  _.='         |            not frozen) desserts.
 # {   ``  _.='       |         1. "The Program" refers to any copyrightable
 #  {    \`     ;    /             work, recipe, or social media post
@@ -18,8 +18,8 @@
 #           `-._(                 further, they may be artificially or
 #                                 naturally sentient (or close enough).
 
-
 import unittest
+
 from util import record_matches_fips, record_is_all_industries, record_is_software_industry, get_fips, get_estabs, get_emplvl, get_wages
 
 
@@ -38,6 +38,26 @@ class TestUtil(unittest.TestCase):
                 "31079": "TEST AREA B",
                 "29510": "TEST AREA C",
                 }
+
+    def test_get_emplvl(self):
+        self.assertEqual(1, get_emplvl(self.all_ind_10_good))
+        self.assertEqual(605, get_emplvl(self.fips_bad))
+        self.assertEqual(605, get_emplvl(self.industry_bad))
+
+    def test_get_estabs(self):
+        self.assertEqual(2, get_estabs(self.all_ind_10_good))
+        self.assertEqual(22, get_estabs(self.fips_bad))
+        self.assertEqual(22, get_estabs(self.industry_bad))
+
+    def test_get_fips(self):
+        self.assertEqual("02016", get_fips(self.all_ind_10_good))
+        self.assertEqual("50000", get_fips(self.fips_bad))
+        self.assertEqual("31079", get_fips(self.industry_bad))
+
+    def test_get_wages(self):
+        self.assertEqual(59925, get_wages(self.all_ind_10_good))
+        self.assertEqual(47017021, get_wages(self.fips_bad))
+        self.assertEqual(47017021, get_wages(self.industry_bad))
 
     def test_record_matches_fips(self):
         self.assertTrue(record_matches_fips(self.all_ind_10_good, self.areas))
@@ -61,23 +81,3 @@ class TestUtil(unittest.TestCase):
         self.assertFalse(record_is_software_industry(self.software_5132_bad))
         self.assertFalse(record_is_software_industry(self.software_51321_bad))
         self.assertFalse(record_is_software_industry(self.industry_bad))
-
-    def test_get_fips(self):
-        self.assertEqual("02016", get_fips(self.all_ind_10_good))
-        self.assertEqual("50000", get_fips(self.fips_bad))
-        self.assertEqual("31079", get_fips(self.industry_bad))
-
-    def test_get_estabs(self):
-        self.assertEqual(2, get_estabs(self.all_ind_10_good))
-        self.assertEqual(22, get_estabs(self.fips_bad))
-        self.assertEqual(22, get_estabs(self.industry_bad))
-
-    def test_get_emplvl(self):
-        self.assertEqual(1, get_emplvl(self.all_ind_10_good))
-        self.assertEqual(605, get_emplvl(self.fips_bad))
-        self.assertEqual(605, get_emplvl(self.industry_bad))
-
-    def test_get_wages(self):
-        self.assertEqual(59925, get_wages(self.all_ind_10_good))
-        self.assertEqual(47017021, get_wages(self.fips_bad))
-        self.assertEqual(47017021, get_wages(self.industry_bad))

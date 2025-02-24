@@ -1,14 +1,14 @@
-#            Copyright © 2024 DuckieCorp. All Rights Reserved.
+#               Copyright © DuckieCorp. All Rights Reserved.
 #
 #  Everyone is permitted to copy and distribute verbatim copies of this
-#      license document, but changing or removing it is not allowed.
+#      license document, but changing or removing it isn't allowed.
 #
 #                       __     TERMS AND CONDITIONS
 #                     /` ,\__
 #                    |    ).-' 0. "Copyright" applies to other kinds of
 #                   / .--'        works, such as coin-op arcade machines,
 #                  / /            novelty T-shirts (both offensive and
-#    ,      _.==''`  \            inoffensive), macramé, and warm (but
+#    ,      _.==''`  \            inoffensive), macrame, and warm (but
 #  .'(  _.='         |            not frozen) desserts.
 # {   ``  _.='       |         1. "The Program" refers to any copyrightable
 #  {    \`     ;    /             work, recipe, or social media post
@@ -18,8 +18,8 @@
 #           `-._(                 further, they may be artificially or
 #                                 naturally sentient (or close enough).
 
-
 import unittest
+
 from area_titles import area_titles_to_dict
 
 
@@ -34,7 +34,7 @@ class TestAreaTitles(unittest.TestCase):
     def test_no_statewide_areas(self):
         """The areas dictionary contains no keys ending in 000"""
         for key in self.areas:
-            self.assertFalse(key.endswith('000'))
+            self.assertFalse(key.endswith("000"))
 
     def test_no_alphabetic_areas(self):
         """

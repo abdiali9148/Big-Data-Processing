@@ -1,21 +1,13 @@
 # CS 1440 Project 3: Big Data Processing - Instructions
 
-Previous Semester Statistics     | Fall 2023 | Spring 2024
---------------------------------:|:---------:|:---------------
-Average Hours Spent              | 10.31     | 9.592 
-Standard Deviation Hours         | 5.417     | 4.498 
-% students thought this was Easy | 20.0%     | 15.9% 
-... Medium                       | 43.0%     | 39.8% 
-... Hard                         | 21.0%     | 20.5% 
-... Too Hard/Did not complete    | 16.0%     | 23.9% 
-
-
-**You may use AI tools** such as ChatGPT or GitHub Copilot to assist with code and documentation
-
-*   If you do this, explain in your Software Development Plan *which* tools were used, *where* they were used, and *how* they were used
-*   Use comments to *clearly* identify which portions of source code were written by the tool
-*   Failure to document use of these tools will be regarded as a **violation of academic integrity** and I will pursue sanctions
-    *   The same applies to any other resources from outside the class
+Previous Semester Statistics     | Fall 2023 | Spring 2024 | Fall 2024
+--------------------------------:|:---------:|:-----------:|:------------
+Average Hours Spent              | 10.31     | 9.592       | 9.95
+Standard Deviation Hours         | 5.417     | 4.498       | 4.49
+% students thought this was Easy | 20.0%     | 15.9%       | 21.9%
+... Medium                       | 43.0%     | 39.8%       | 50.7%
+... Hard                         | 21.0%     | 20.5%       | 20.5%
+... Too Hard/Did not complete    | 16.0%     | 23.9%       | 6.8%
 
 
 **Grace Points**: If these tags are pushed to GitLab before 11:59 PM on the Monday before the due date, you will get up to **5 grace points** per tag:
@@ -25,6 +17,8 @@ Standard Deviation Hours         | 5.417     | 4.498
 
 To be eligible for grace points these tags must be on **separate commits**; they cannot be together.
 
+
+*   [AI Tools / External Resources Policy](#ai-tools-external-resources-policy)
 *   [How to Do This Project](#how-to-do-this-project)
     *   [Phase 0: Requirements Analysis](#phase-0-requirements-analysis-tag-name-analyzed)
     *   [Phase 1: Design](#phase-1-design-tag-name-designed)
@@ -33,6 +27,31 @@ To be eligible for grace points these tags must be on **separate commits**; they
     *   [Phase 4: Deployment](#phase-4-deployment-tag-name-deployed)
     *   [Phase 5: Maintenance](#phase-5-maintenance)
 *   [What We Look for When Grading](#what-we-look-for-when-grading)
+
+
+
+## AI Tools / External Resources Policy
+
+I will not accept code or documentation that is not 100% your own creation.
+
+You may use AI and external resources in ways that assist your understanding without replacing your effort or responsibility to learn.
+
+Acceptable uses include:
+
+*   Analyzing project instructions.
+*   Understanding why and how starter code works.
+*   Brainstorming ideas for a prototype.
+*   Researching and explaining error messages.
+*   Proofreading your documentation.
+
+Unacceptable uses include:
+
+*   Generating code, including unit tests.
+*   Debugging your code or suggesting fixes.
+*   Writing parts of your software plan or any other deliverable.
+
+If you're stuck, ask for help before resorting to shortcuts or risking a violation.
+
 
 
 ## How To Do This Project
@@ -179,14 +198,14 @@ The following procedure is the best way for you to know what it will be like whe
         4.  `tested` (may be on the same commit as `implemented`)
         5.  `deployed` (may be on the same commit as `tested`)
     *   If you accidentally commit a huge CSV file, ask the instructor for help
-*   **Quality Documentation (35 points)**
-    *   Plan.md
-        *   Each section is filled out with a convincing level of detail
-        *   No code is pasted from the source files
 *   **Time Management (5 points)**
     *   Signature.md contains accurate information about the time you spent on this project
         *   The time reported on the **TOTAL** entry is the sum of the daily entries
     *   The *TODO* message and the placeholder entries have been removed
+*   **Quality Documentation (35 points)**
+    *   Plan.md
+        *   Each section is filled out with a convincing level of detail
+        *   No code is pasted from the source files
 *   **Code Quality (30 points)**
     *   All unit tests pass
     *   Original unit tests are left unchanged (additional new tests are permitted, but not required)

@@ -1,14 +1,14 @@
-#            Copyright © 2024 DuckieCorp. All Rights Reserved.
+#               Copyright © DuckieCorp. All Rights Reserved.
 #
 #  Everyone is permitted to copy and distribute verbatim copies of this
-#      license document, but changing or removing it is not allowed.
+#      license document, but changing or removing it isn't allowed.
 #
 #                       __     TERMS AND CONDITIONS
 #                     /` ,\__
 #                    |    ).-' 0. "Copyright" applies to other kinds of
 #                   / .--'        works, such as coin-op arcade machines,
 #                  / /            novelty T-shirts (both offensive and
-#    ,      _.==''`  \            inoffensive), macramé, and warm (but
+#    ,      _.==''`  \            inoffensive), macrame, and warm (but
 #  .'(  _.='         |            not frozen) desserts.
 # {   ``  _.='       |         1. "The Program" refers to any copyrightable
 #  {    \`     ;    /             work, recipe, or social media post
@@ -18,51 +18,42 @@
 #           `-._(                 further, they may be artificially or
 #                                 naturally sentient (or close enough).
 
-
 import unittest
+
 from report import Report
 
 
 class TestReport(unittest.TestCase):
 
-    def test_initializer_year(self):
-        """
-        The year of the Report object can be set from a parameter to the initializer
-        It defaults to 1999
-        """
-        self.assertEqual(2000, Report(2000).year)
-        self.assertEqual(1980, Report(1980).year)
-        self.assertEqual(-1, Report(-1).year)
-
     def test_str(self):
         """Report.__str__ returns a well-formatted report"""
-        report = Report(2036)
-        report.all.num_areas = 1337
-        report.all.total_annual_wages = 13333337
-        report.all.max_annual_wages = ["Trantor", 123456]
-        report.all.total_estabs = 42
-        report.all.max_estabs = ["Terminus", 12]
-        report.all.total_emplvl = 987654
-        report.all.max_emplvl = ["Anacreon", 654]
+        rpt = Report()
+        rpt.all.num_areas = 1337
+        rpt.all.total_annual_wages = 13333337
+        rpt.all.max_annual_wages = ["Trantor", 123456]
+        rpt.all.total_estabs = 42
+        rpt.all.max_estabs = ["Terminus", 12]
+        rpt.all.total_emplvl = 987654
+        rpt.all.max_emplvl = ["Anacreon", 654]
 
-        report.soft.num_areas = 1010
-        report.soft.total_annual_wages = 101001110111
-        report.soft.max_annual_wages = ["Helicon", 110010001]
-        report.soft.total_estabs = 1110111
-        report.soft.max_estabs = ["Solaria", 11000]
-        report.soft.total_emplvl = 100010011
-        report.soft.max_emplvl = ["Gaia", 10110010]
+        rpt.soft.num_areas = 1010
+        rpt.soft.total_annual_wages = 101001110111
+        rpt.soft.max_annual_wages = ["Helicon", 110010001]
+        rpt.soft.total_estabs = 1110111
+        rpt.soft.max_estabs = ["Solaria", 11000]
+        rpt.soft.total_emplvl = 100010011
+        rpt.soft.max_emplvl = ["Gaia", 10110010]
 
         exemplar = """\
-<+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+>
-<+>                     UNITED STATES OF AMERICA                     <+>
-<+>                    BUREAU OF LABOR STATISTICS                    <+>
-<+>             Quarterly Census of Employment and Wages             <+>
-<+>                 Annual Report For The Year 2036                  <+>
-<+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+>
+<<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>>
+<<<                     UNITED STATES OF AMERICA                     >>>
+<<<                    BUREAU OF LABOR STATISTICS                    >>>
+<<<             Quarterly Census of Employment and Wages             >>>
+<<<                      Annual Report For 2023                      >>>
+<<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>>
 
-Statistics over all industries
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Statistics For All Industries
+-----------------------------------------------------------------------
 Number of FIPS areas in report       1,337
 
 Total annual wages                   $13,333,337
@@ -78,8 +69,8 @@ Area with maximum employment         Anacreon
 Maximum reported employment level    654
 
 
-Statistics over the software publishing industry
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Statistics For The Software Publishing Industry
+-----------------------------------------------------------------------
 Number of FIPS areas in report       1,010
 
 Total annual wages                   $101,001,110,111
@@ -97,4 +88,4 @@ Maximum reported employment level    10,110,010"""
         # In case there is a difference between the strings, this
         # parameter controls how much is displayed
         self.maxDiff = 3000
-        self.assertEqual(exemplar, str(report))
+        self.assertEqual(exemplar, str(rpt))
