@@ -41,7 +41,7 @@ Your program should run in a reasonable amount of time.  Use the [Performance Be
 
 ## Running Unit Tests
 
-The starter code consists of 23 test cases, of which only two succeed at the outset.  You will increase the number of passing tests as you progress.
+The starter code consists of 25 test cases, of which only one succeeds at the outset.  You will increase the number of passing tests as you progress.
 
 *   You may run the unit tests through PyCharm or the shell.
 *   The unit tests are files in the directory `src/tests`

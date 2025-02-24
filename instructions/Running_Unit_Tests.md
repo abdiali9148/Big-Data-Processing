@@ -1,6 +1,6 @@
 # CS 1440 Project 3: Big Data Processing - Running Unit Tests
 
-The starter code consists of 23 test cases, 2 of which already pass.  You will increase the number of passing tests as you progress in the project.
+The starter code consists of 25 test cases, 2 of which already pass.  You will increase the number of passing tests as you progress in the project.
 
 *   [Running Unit Tests In PyCharm](#running-unit-tests-in-pycharm)
 *   [Running All Tests From The Command Line](#running-all-tests-from-the-command-line)
@@ -51,15 +51,17 @@ The `run_tests.py` script is a convenient way to execute all of the tests in one
 
         ... dozens of lines snipped ...
 
+        ======================================================================
         FAIL: test_record_matches_fips (tests.test_util.TestUtil.test_record_matches_fips)
         ----------------------------------------------------------------------
         Traceback (most recent call last):
-          File "/home/fadein/3-Big_Data/starter/src/tests/test_util.py", line 37, in test_record_matches_fips
-            self.assertTrue(record_matches_fips(self.all_good, self.areas))
+          File "/home/fadein/3-Big_Data/starter/src/tests/test_util.py", line 63, in test_record_matches_fips
+            self.assertTrue(record_matches_fips(self.all_ind_10_good, self.areas))
+            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
         AssertionError: None is not true
 
         ----------------------------------------------------------------------
-        Ran 23 tests in 0.005s
+        Ran 25 tests in 0.005s
 
         FAILED (failures=7, errors=14)
         ```
@@ -79,19 +81,21 @@ The command to run a single suite is different than `run_tests.py`.
 0.  `cd src`
 1.  Run a command of this form, substituting the name of your desired test suite
     *   ```bash
-        $ python -m unittest tests.test_report
-        ..
-        ----------------------------------------------------------------------
-        Ran 2 tests in 0.000s
+        $ python -m unittest tests.test_util
 
-        OK
+        ... dozens of lines snipped ...
+
+        ----------------------------------------------------------------------
+        Ran 7 tests in 0.001s
+
+        FAILED (failures=7)
         ```
 
 | Argument       | Meaning
 |----------------|---------------------------------------------------------------------------
 | `-m unittest`  | Instruct Python to import the `unittest` module before running any more code
 | `tests`        | The name of the directory containing unit test files
-| `test_report`  | A Python source file's name, minus `.py`
+| `test_util`    | A Python source file's name, minus `.py`
 
 
 
@@ -103,21 +107,30 @@ You can even focus on a single unit test:
 1.  Run a command of this form, substituting the name of your desired test case
     *   ```bash
         $ cd src
-        $ python -m unittest tests.test_report.TestReport.test_str
-        .
+        $ python -m unittest tests.test_util.TestUtil.test_record_matches_fips
+        F
+        ======================================================================
+        FAIL: test_record_matches_fips (tests.test_util.TestUtil.test_record_matches_fips)
+        ----------------------------------------------------------------------
+        Traceback (most recent call last):
+          File "/home/fadein/3-Big_Data/starter/src/tests/test_util.py", line 63, in test_record_matches_fips
+            self.assertTrue(record_matches_fips(self.all_ind_10_good, self.areas))
+            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        AssertionError: None is not true
+
         ----------------------------------------------------------------------
         Ran 1 test in 0.000s
 
-        OK
+        FAILED (failures=1)
         ```
 
-| Argument       | Meaning
-|----------------|---------------------------------------------------------------------------
-| `-m unittest`  | Instruct Python to import the `unittest` module before running any more code
-| `tests`        | The name of the directory containing Unit Test files
-| `test_report`  | A Python source file's name, minus `.py`
-| `TestReport`   | Name of a class within the file `test_report.py`
-| `test_str`     | Name of a unit test function within the class `TestReport`
+| Argument                   | Meaning
+|----------------------------|---------------------------------------------------------------------------
+| `-m unittest`              | Instruct Python to import the `unittest` module before running any more code
+| `tests`                    | The name of the directory containing unit test files
+| `test_util`                | A Python source file's name, minus `.py`
+| `TestUtil`                 | A class within the file `test_util.py`
+| `test_record_matches_fips` | A unit test method within the class `TestUtil`
 
 
 
@@ -125,18 +138,18 @@ You can even focus on a single unit test:
 
 As tests are executed, a progress report is generated. If tests fail, additional information is provided to clarify the nature of the failure. However, when multiple tests fail, this can result in a substantial amount of text, which may be overwhelming.
 
-The provided starter code includes a total of 23 test cases. Out of these, 2 tests pass successfully. Regarding the 21 tests that don't pass:
+The provided starter code includes a total of 25 test cases. Out of these, 1 test passes successfully. Regarding the 24 tests that don't pass:
 
 - 7 tests *fail*, indicating that these tests execute but do not produce the expected outcomes.
-- 14 tests result in an *error*, suggesting that the code being tested encounters a crash during execution.
+- 17 tests result in an *error*, suggesting that the code being tested encounters a crash during execution.
 
 The outcomes of these tests are concisely summarized in the table below:
 
 | Test Outcome | Number of Tests | Meaning
 |--------------|-----------------|--------
-| `ok`         | 2               | The test passed                                        
+| `ok`         | 1               | The test passed                                        
 | `FAIL`       | 7               | The test finished, but the expected result was not observed 
-| `ERROR`      | 14              | No output was produced because the code under test crashed 
+| `ERROR`      | 17              | No output was produced because the code under test crashed 
 
 
 ### `ok` - A Passing Test
@@ -144,8 +157,8 @@ The outcomes of these tests are concisely summarized in the table below:
 When a test succeeds, the output displays the name of the test method, the complete name of the module it resides in, and its docstring, all followed by `ok`.
 
 ```
-The year of the Report object can be set from a parameter to the initializer ... ok
 test_str (tests.test_report.TestReport.test_str)
+Report.__str__ returns a well-formatted report ... ok
 ```
 
 
@@ -160,9 +173,10 @@ In this example the method `get_emplvl()` returned `None` instead of the expecte
 FAIL: test_get_emplvl (tests.test_util.TestUtil.test_get_emplvl)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/fadein/3-Big_Data/starter/src/tests/test_util.py", line 62, in test_get_emplvl
-    self.assertEqual(get_emplvl(self.all_good), 1)
-AssertionError: None != 1
+  File "/home/fadein/3-Big_Data/starter/src/tests/test_util.py", line 43, in test_get_emplvl
+    self.assertEqual(1, get_emplvl(self.all_ind_10_good))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != None
 ```
 
 
@@ -170,19 +184,16 @@ AssertionError: None != 1
 
 A test may also end if it *unexpectedly* crashes (note: it is possible to design a test for a function that is *intended* to crash; for details, refer to the `unittest` documentation). If a test fails due to an error, the output will display the line number in the unit test where the crash occurred, followed by the specific piece of source code that triggered the crash.
 
-In this example the string `"110011"` is searched for in a dictionary called `self.areas`.  However, instead of a dictionary, `self.areas` is the value `None`, which is not an iterable:
+In this example, a `for` loop is used to look at all keys in the `self.areas` dictionary.  However, `self.areas` is the value `None` instead of a dictionary:
 
 ```
 ======================================================================
-ERROR: test_territories (tests.test_area_titles.TestAreaTitles.test_territories)
-The areas dictionary contains FIPS codes representing
+ERROR: test_keylen_is_5 (tests.test_area_titles.TestAreaTitles.test_keylen_is_5)
+The areas dictionary contains no keys != len() of 5
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/fadein/3-Big_Data/starter/src/tests/test_area_titles.py", line 116, in test_territories
-    self.assertIn("11001", self.areas)  # District of Columbia
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/fadein/.pyenv/versions/3.11.5/lib/python3.11/unittest/case.py", line 1137, in assertIn
-    if member not in container:
-       ^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: argument of type 'NoneType' is not iterable
+  File "/home/fadein/3-Big_Data/starter/src/tests/test_area_titles.py", line 50, in test_keylen_is_5
+    for key in self.areas:
+               ^^^^^^^^^^
+TypeError: 'NoneType' object is not iterable
 ```

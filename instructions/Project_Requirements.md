@@ -35,8 +35,8 @@ This project focuses on **Test-Driven Development (TDD)**, which differs from yo
 
 ### Running The Unit Tests
 
-*   This project contains 23 unit tests.
-*   At the end of the sprint all 23 tests must pass.
+*   This project contains 25 unit tests.
+*   At the end of the sprint all 25 tests must pass.
 *   Do not edit the unit tests.
     *   If the tests do not pass, the problem is in the program, not the tests!
 
