@@ -1,12 +1,12 @@
-<+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+>
-<+>                     UNITED STATES OF AMERICA                     <+>
-<+>                    BUREAU OF LABOR STATISTICS                    <+>
-<+>             Quarterly Census of Employment and Wages             <+>
-<+>                 Annual Report For The Year 2023                  <+>
-<+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+>
+<<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>>
+<<<                     UNITED STATES OF AMERICA                     >>>
+<<<                    BUREAU OF LABOR STATISTICS                    >>>
+<<<             Quarterly Census of Employment and Wages             >>>
+<<<                      Annual Report For 2023                      >>>
+<<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>>
 
-Statistics over all industries
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Statistics For All Industries
+-----------------------------------------------------------------------
 Number of FIPS areas in report       2
 
 Total annual wages                   $89,330,465,714
@@ -22,8 +22,8 @@ Area with maximum employment         District of Columbia
 Maximum reported employment level    757,701
 
 
-Statistics over the software publishing industry
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Statistics For The Software Publishing Industry
+-----------------------------------------------------------------------
 Number of FIPS areas in report       0
 
 Total annual wages                   $0

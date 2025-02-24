@@ -1,12 +1,12 @@
-<+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+>
-<+>                     UNITED STATES OF AMERICA                     <+>
-<+>                    BUREAU OF LABOR STATISTICS                    <+>
-<+>             Quarterly Census of Employment and Wages             <+>
-<+>                 Annual Report For The Year 2023                  <+>
-<+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+>
+<<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>>
+<<<                     UNITED STATES OF AMERICA                     >>>
+<<<                    BUREAU OF LABOR STATISTICS                    >>>
+<<<             Quarterly Census of Employment and Wages             >>>
+<<<                      Annual Report For 2023                      >>>
+<<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>>
 
-Statistics over all industries
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Statistics For All Industries
+-----------------------------------------------------------------------
 Number of FIPS areas in report       3,274
 
 Total annual wages                   $11,111,146,660,445
@@ -22,8 +22,8 @@ Area with maximum employment         Los Angeles County, California
 Maximum reported employment level    4,470,309
 
 
-Statistics over the software publishing industry
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Statistics For The Software Publishing Industry
+-----------------------------------------------------------------------
 Number of FIPS areas in report       1,889
 
 Total annual wages                   $127,153,065,249

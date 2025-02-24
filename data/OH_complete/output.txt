@@ -1,12 +1,12 @@
-<+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+>
-<+>                     UNITED STATES OF AMERICA                     <+>
-<+>                    BUREAU OF LABOR STATISTICS                    <+>
-<+>             Quarterly Census of Employment and Wages             <+>
-<+>                 Annual Report For The Year 2023                  <+>
-<+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+>
+<<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>>
+<<<                     UNITED STATES OF AMERICA                     >>>
+<<<                    BUREAU OF LABOR STATISTICS                    >>>
+<<<             Quarterly Census of Employment and Wages             >>>
+<<<                      Annual Report For 2023                      >>>
+<<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>>
 
-Statistics over all industries
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Statistics For All Industries
+-----------------------------------------------------------------------
 Number of FIPS areas in report       89
 
 Total annual wages                   $345,699,536,711
@@ -22,8 +22,8 @@ Area with maximum employment         Franklin County, Ohio
 Maximum reported employment level    772,337
 
 
-Statistics over the software publishing industry
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Statistics For The Software Publishing Industry
+-----------------------------------------------------------------------
 Number of FIPS areas in report       78
 
 Total annual wages                   $1,368,416,860

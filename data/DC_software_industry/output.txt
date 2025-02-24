@@ -1,12 +1,12 @@
-<+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+>
-<+>                     UNITED STATES OF AMERICA                     <+>
-<+>                    BUREAU OF LABOR STATISTICS                    <+>
-<+>             Quarterly Census of Employment and Wages             <+>
-<+>                 Annual Report For The Year 2023                  <+>
-<+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+>
+<<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>>
+<<<                     UNITED STATES OF AMERICA                     >>>
+<<<                    BUREAU OF LABOR STATISTICS                    >>>
+<<<             Quarterly Census of Employment and Wages             >>>
+<<<                      Annual Report For 2023                      >>>
+<<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>>
 
-Statistics over all industries
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Statistics For All Industries
+-----------------------------------------------------------------------
 Number of FIPS areas in report       0
 
 Total annual wages                   $0
@@ -22,8 +22,8 @@ Area with maximum employment
 Maximum reported employment level    0
 
 
-Statistics over the software publishing industry
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Statistics For The Software Publishing Industry
+-----------------------------------------------------------------------
 Number of FIPS areas in report       1
 
 Total annual wages                   $554,343,136
