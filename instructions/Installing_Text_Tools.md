@@ -1,6 +1,17 @@
 # CS 1440 Project 3: Big Data Processing - Installing Your Text Tools
 
-**You are not expected to spend more than a few minutes installing your text tools.  If you get stuck, just use the shell's built-in tools.**
+This document explains how to "install" your Text Tools so that you can run `tt.py` from *anywhere* on your system without needing to also type `python` in the command line.
+
+**This is completely optional!  You are not expected to spend more than a few minutes installing your Text Tools.  If you get stuck, just use the shell's built-in tools.**
+
+* [How To Install Your Text Tools](#how-to-install-your-text-tools)
+* [Using *Your* Text Tools](#using-your-text-tools)
+* [Troubleshooting](#troubleshooting)
+* [How Your Shell Looks Up Programs In $PATH] (#how-your-shell-looks-up-programs-in-path)
+
+
+
+## How To Install Your Text Tools
 
 You have created your own text processing tools, which increase your power as a programmer in two ways:
 
@@ -13,20 +24,15 @@ Each of the tools implemented in Project #2 directly corresponds to a classic Un
 
 On the other hand, your Text Tools have the advantage of being flexible: you can add to or change them as the need arises.  And they are *yours*!  For this reason you can make them available for use anywhere on your system.
 
-
-
-## How To Install Your Text Tools
-
 While you were working on Project #2 your current working directory (CWD) had to be `src/` to run `tt.py`.  Further, when you ran the program you had to type `python tt.py` to launch it.
 
-This document explains how to "install" your Text Tools so that you can run `tt.py` from *anywhere* on your system without needing to also type `python` in the command line.
 
 
 ### What Shell Am I Using?
 
 To learn which shell you are using, run this command:
 
-```
+```bash
 $ echo $SHELL
 ```
 
@@ -41,10 +47,10 @@ In order for `bash` to find `tt.py` on your system, you need to add its location
 1. Change into the `src/` directory containing `tt.py`
 2. Run `pwd` to print the absolute path of this directory
 3. Open the file `~/.bash_profile` in a proper text editor (i.e. PyCharm, *not* Notepad or WordPad)
-4. Add this line to the bottom of `~/.bash_profile`, replacing `<TEXTTOOLS_DIR>` with the path from step 3
+4. Add this line to the bottom of `~/.bash_profile`, replacing the string `TEXTTOOLS_DIR` with the path from step 3
 
-```
-PATH=<TEXTTOOLS_DIR>:$PATH
+```bash
+PATH=TEXTTOOLS_DIR:$PATH
 ```
 
 It is important to *not* insert any white space around the assignment operator `=`.  This is a syntax rule of the shell; extra white space makes the shell misinterpret the command.
@@ -52,23 +58,22 @@ It is important to *not* insert any white space around the assignment operator `
 If the path to `tt.py` reported by `pwd` contains spaces (e.g. because your Windows username contains spaces), you'll need to "escape" them by adding a single backslash `\` in front of each one.
 
 
-#### Test It Out
-
-0.  Open a new bash window
-1.  Run `tt.py`.  You should see its usage message and not a "command not found" error.
-
-
-
 ### Bash users on Linux or WSL
 
 *   Follow the above instructions, but edit the file `~/.bashrc` instead of `~/.bash_profile`
-*   Open a new terminal to test your configuration.
 
 
 ### macOS And Zsh Users
 
 *   If your primary shell is Zsh, follow the Bash procedure described above, instead making changes to the file `~/.zshrc`.
-*   Open a new terminal to test your configuration.
+
+
+### Test It Out
+
+0.  Open a new shell window
+1.  Run `tt.py`.  You should see its usage message and not a "command not found" error.
+
+
 
 
 
@@ -76,7 +81,7 @@ If the path to `tt.py` reported by `pwd` contains spaces (e.g. because your Wind
 
 Using the program you wrote yourself is the ultimate computer nerd flex.
 
-After installing your text tools and creating `startgrep`, you can slightly modify the commands in the associated `data/*/README.md` file so that you can utilize your own text tools instead of the built-in Unix text tools.
+After installing your Text Tools and creating `startgrep`, you can slightly modify the commands in the associated `data/*/README.md` file so that you can utilize your own Text Tools instead of the built-in Unix text tools.
 
 The following commands are listed in `data/UT_all_industries/README.md` to create the `UT_all_industries` data set.
 
@@ -108,7 +113,7 @@ This error indicates that the directory containing `tt.py` is not correctly spec
 *   Double-check the spelling of the directory containing `tt.py` within `~/.bash_profile` or `~/.zshrc`.
 *   Unless you've moved things around, the path containing `tt.py` should end in `src`.
 *   If the path to `tt.py` on your system contains spaces, make sure each is escaped with a backslash `\`.  As an example, see how I handled John Jacob Jingleheimer Smith's home directory in Git+Bash:
-    ```
+    ```bash
     PATH=/c/Users/John\ Jacob\ Jingleheimer\ Smith/cs1440/proj3/src:$PATH
     ```
 
@@ -128,7 +133,7 @@ bash: /c/Users/user/Desktop/cs1440-falor-erik-proj3/src/tt.py: /usr/bin/env: bad
 The remedy is to update the shebang line in `tt.py`.  The first line of `tt.py`
 looks like this:
 
-```
+```python
 #!/usr/bin/env python
 ```
 
@@ -163,3 +168,22 @@ $ python src/tt.py head -n 10 README.md > testfile
 ```
 
 2.  Remove the alias from `.bash_profile` or `.zshrc` in your home directory.  You'll need to find and open that file in a proper text editor (such as Nano).  Whenever you want to run the Python REPL from the bash shell you'll need to remember to first type `winpty` before `python` to prevent it from hanging.
+
+
+
+## How Your Shell Looks Up Programs In $PATH
+
+`man bash` describes how the Bash shell uses the information in `$PATH` to associate the command names you type at the prompt with programs on your hard drive:
+
+> If the name is neither a shell function nor a builtin, and contains no slashes, Bash searches each element of the PATH for a directory containing an executable file by that name. Bash uses a hash table to remember the full pathnames of executable files (see hash under SHELL BUILTIN COMMANDS below). A full search of the directories in PATH is performed only if the command is not found in the hash table.
+
+This is true of Zsh as well.  One of the consequences of the way your shell searches the `$PATH` in order from front-to-back means that you can override programs installed by your OS with versions that you prefer.  Simply adjust `$PATH` so that the location of your custom programs appears before `/usr/bin` and `/bin` (if you are a macOS users who uses Homebrew to customize your Mac, now you know how it works).
+
+The first time you run a command like `ls` in a shell, Bash/Zsh has to search through `$PATH` to locate the executable program on your hard drive.  Once it knows where it is, it remembers that fact by recording it in a hash table (a.k.a. dictionary).  This makes the shell feel faster because it doesn't need to repeatedly look for a file whose location most likely hasn't changed.  However, if you install another version of `ls` into a directory that appears earlier in `$PATH`, you'll find that your shell still runs the old version.
+
+There are two ways to fix this:
+
+0. Close & re-start your shell so that hash table is discarded
+1. Run `hash -r` to remove all entries from the hash table; this does not restart your shell
+
+You can see what's in that hash table on Bash by running `hash -l`.  The equivalent command in Zsh is `hash -L`.
