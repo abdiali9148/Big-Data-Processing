@@ -10,14 +10,24 @@ Phase 0: Requirements Analysis (tag name `analyzed`)
 Deliver:
 
 *   [ ] Re-write the instructions in your own words.
-    *   If you don't do this, you won't know what you're supposed to do!
-    *   Don't leave out details!
+    *   So the first thing I have to read all the data files and the QCEW files.
+    *   I know that i have to make each of the 25 functions pass based on their unit test.
+    *   
 *   [ ] Explain the problem this program aims to solve.
-    *   Describe what a *good* solution looks like.
-    *   List what you already know how to do.
+    *   A good solution would be if all the tests pass, and if the report actually runs.
+    *   From reading the project requirements i know how to work on most of the functions.
+      * some functions say exactly what to do. for example on one, i just return and integer with the index i learn from
+      *   one of the pages in the QCEW pages.
     *   Point out any challenges that you can foresee.
+      *  As of right i don't know how i would work on the big_data.py module.
 *   [ ] List all of the data that is used by the program, making note of where it comes from.
+        * Each of the functions wants to return something.
+        * I have to keep reading the QCEW to find what each function wants to do.
+        * in big_data.py it says if there is no argument, make it crash. so im assuming it wants me to
+          * say a file each time.
 *   [ ] Explain what form the program's output will take.
+        *  When i run the src/big_data.py there must be a file after that.
+        *  Once there is a file, it will run the report. All the unit tests must pass for the report to work.
 *   [ ] **Tag** the last commit in this phase `analyzed` and push it to GitLab.
     *   *Grace Points: if this tag is pushed before 11:59 PM on the Monday before the due date, you will receive up to 5 points back*
 
