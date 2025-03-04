@@ -42,10 +42,72 @@ Deliver:
 
 *   [ ] Pseudocode that captures how each function works in plain language.
     *   Pseudocode != Python.  Do not paste your finished source code into this part of the plan.
-    *   Describe important functions and classes in your program.  Include such details as:
-        *   Names of functions/classes
-        *   Parameter names and their types
-        *   Types of data returned by functions
+      *   Starting with util.py
+        * for emplvl it says to extract the emplvl for a given year from the QCEW record.
+          * looking into the QCEW record, the annual_avg_emplvl has a max length of 9.
+            * ```python
+                  i think when it says extract i will have to return something.
+                  a record is "A line of text containing multiple fields separated by commas"
+                      emplvl(record) Extracts the Annual average of monthly employment levels from a record.  Returns an integer.
+                
+                  return an integer of the 10th index in record. record[9] in python
+            
+            ```
+        * for estabs it says the same thing as emplvl but the quarterly establishment counts
+          * im thinking i do the same thing but since the maximum in the QCEW records is 8 for estabs, 
+            * i will return the integer value at the 8th index.
+            * ```python
+                return an integer of the 11th integer in record.
+                    needs an integer because of said project requirements.
+            ```
+        * for the get_fips, i had to look at the self.all_ind_10_good in the tests.
+             * there are 2 indexes that could match the fips code. 0 and 10. 
+          * since this function returns a string. ill probably use index 0 because it closely matches it.
+            * ```python
+                return the first index of record. so record[0]
+                    no int because fips returns a string.
+            ```
+        * get_wages.
+          *  since i have planned the last 3, i have noticed a pattern with the test.
+            * self.assertEqual(59925, get_wages(self.all_ind_10_good))
+              * for every index in self.all_ind_10_good. the record[#] index has to be equal to that.
+              * the 10th index in self.all_ind_10_good is 59925. so my output will be like this.
+              * ```python
+                    return an integer of the 11th integer in record.
+                        int because wages returns an integer
+            ```
+    * These last 3 only return True
+        * record_is_all_industries
+          * Records pertaining to "all industries" include a reportable FIPS area
+            * this record has to return true if the industry code is 0 and ownership code is 10.
+            * self.assertTrue(record_is_all_industries(self.all_ind_10_good))
+              * this code is only true when the record is 0 and 10.\
+              * this is true when record is the 2nd and 3rd indexes.
+              
+            * ```python
+                return true if the 2nd index of record is 0 and the 3rd index of record is 10.
+             ```
+      * record_is_software_industry
+        * same as all industries but returns true if the industry code is 513210 and ownership code is 5.
+        * this one has a different list self.software_513210_good. so itll have the same code as all industries.
+        * ```python
+            return true if the 2nd index of record is 5 and the 3rd index is 513210
+        ```
+        
+      * record_matches_fips
+        * im not sure how to do this one right now. 
+  * area_titles.py
+        * the first thing i know about this is that i have to filter out some citys or countrys.
+        * these are allowed and easily identified
+        * The District of Columbia
+          Puerto Rico
+          Virgin Islands
+          "Overseas Locations"
+          "Multicounty, Not Statewide"
+          "Out-of-State"
+          and "Unknown Or Undefined" areas
+  * industry_data.py
+    
 *   [ ] Explain what happens in the face of good and bad input.
     *   As you think of specific examples, write them under **Phase 3** so you can run them as soon as the program is functional.
 *   [ ] **Tag** the last commit in this phase `designed` and push it to GitLab.
