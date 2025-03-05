@@ -95,7 +95,9 @@ Deliver:
         ```
         
       * record_matches_fips
-        * im not sure how to do this one right now. 
+      ```python
+      check to see if the get_fips record is in the area. if it is, return True```
+  
   * area_titles.py
         * the first thing i know about this is that i have to filter out some citys or countrys.
         * these are allowed and easily identified
@@ -106,7 +108,52 @@ Deliver:
           "Multicounty, Not Statewide"
           "Out-of-State"
           and "Unknown Or Undefined" areas
-  * industry_data.py
+  
+       * The first thing im gonna do is open the file area-titles.csv.
+         * since the parameters are dirname. im gonna start with opening the file with the directory name.
+           * ```python
+                file equal to directoryname,area-titles.csv
+                open file.
+                    go through each line
+                        split each line into two fields
+                        for each field, the first is the fips code, the second is the title
+                        if the len of fips is 5 and its a digit and it does not end with 000.
+                            add that title to the areas
+                return the areas
+          ```
+    * industry_data.py
+      * first this is the __init__(self) function.
+        *  for the parameters, they all have to start with self.
+        * Integers are initialized to 0 Strings are initialized to ""
+        ``` python
+        
+        set self num_areas to be an integer so ill start it at 0.
+        total_annual_wages is 0
+        total_estabs is 0
+        total_emplvl is 0
+    
+        ```
+      * these 3 are lists
+        ```python
+        max_annual_wages stores an area and a number so it will be equal to ["",0]
+        max_estabs stores the same thing
+        max_emplvl stores the same thing.
+       ```
+    * add_record(self, record, areas)
+      * the first thing i see in the test file is dat.num_areas has to be equal to 1.
+        * so ill add one to it.
+      ```python
+      add one to self num_areas
+      
+      get the total of the wages, estabs, and emplv by importing and getting the total of the records.
+      turn these all into variables.
+      
+      Update maximum annual wages if this record's wages are greater
+      
+      Update maximum establishments if this record's establishment count is greater.
+      
+      Update maximum employment level if this record's employment level is greater.
+    ``` 
     
 *   [ ] Explain what happens in the face of good and bad input.
     *   As you think of specific examples, write them under **Phase 3** so you can run them as soon as the program is functional.
@@ -124,7 +171,6 @@ Deliver:
 
 *   [ ] Working code in the `src/` folder.
 *   [ ] Note any relevant and interesting events that happened while you wrote the code.
-    *   e.g. what you learned, what didn't go according to plan.
 *   [ ] **Tag** the last commit in this phase `implemented` and push it to GitLab.
 
 
