@@ -19,7 +19,7 @@
 #                                 naturally sentient (or close enough).
 
 
-from util import *
+from util import get_emplvl, get_estabs, get_wages
 
 
 class IndustryData:
@@ -28,31 +28,33 @@ class IndustryData:
     """
 
     def __init__(self):
-        # Study the instructions and the unit tests to discover
-        # the names and types of the attributes
-        pass
+        self.num_areas = 0
+        self.total_annual_wages = 0
+        self.total_estabs = 0
+        self.total_emplvl = 0
+
+        self.max_annual_wages = ["", 0]
+        self.max_estabs = ["", 0]
+        self.max_emplvl = ["", 0]
 
     def add_record(self, record, areas):
-        """
-        Adds a record's data to the summary statistics.
+        self.num_areas += 1
 
-        This method does not need to validate its input;
-        'record' should already be validated beforehand.
+        area_name = areas.get(record[0].strip('"'), "")
 
-        Parameters:
-         - record: A record containing employment and wage data.
-         - areas: A dictionary mapping FIPS area codes to human-friendly area titles.
+        wages = get_wages(record)
+        estabs = get_estabs(record)
+        emplvl = get_emplvl(record)
 
-        This method updates the following summary statistics:
-         - Adds one to the total number of areas processed.
-         - Calculates and accumulates the total annual wages.
-         - Keeps track of the area with the maximum annual wages.
-         - Calculates and accumulates the total number of establishments.
-         - Keeps track of the area with the maximum number of establishments.
-         - Calculates and accumulates the total employment level.
-         - Keeps track of the area with the maximum employment level.
+        self.total_annual_wages += wages
+        self.total_estabs += estabs
+        self.total_emplvl += emplvl
 
-        Read tests/test_industry_data.py to learn what these fields
-        should be called and what types of data they will hold.
-        """
-        pass
+        if wages > self.max_annual_wages[1]:
+            self.max_annual_wages = [area_name, wages]
+
+        if estabs > self.max_estabs[1]:
+            self.max_estabs = [area_name, estabs]
+
+        if emplvl > self.max_emplvl[1]:
+            self.max_emplvl = [area_name, emplvl]

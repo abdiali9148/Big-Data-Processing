@@ -155,7 +155,26 @@ Deliver:
       Update maximum employment level if this record's employment level is greater.
     ``` 
     
+  * big_data
+     ```python
+        first thing in this file is to check if there is no file given.
+            print a usage
+        
+        create the directory variable by using the second argument given.
+        create the dictionary from the area titles dictionary. with the paramters datadir
+        
+        hard code the annual csv file
+        open the file.
+        read each line.
+    * I see the annual file is a record seperated by commas so i am going to seperate it.
+            split the record of each thing in the list by (",").
+            if the fips match the record and the areas and the record is in all the industries
+                then add the record to the report. all
+            else if the software industry is in the record
+                add the record to the report."soft" for software industries
+  ```
 *   [ ] Explain what happens in the face of good and bad input.
+*  In good input, the report should print, in bad input it should crash or give a USAGE.
     *   As you think of specific examples, write them under **Phase 3** so you can run them as soon as the program is functional.
 *   [ ] **Tag** the last commit in this phase `designed` and push it to GitLab.
     *   *Grace Points: if this tag is pushed before 11:59 PM on the Monday before the due date, you will receive up to 5 points back*
@@ -171,6 +190,8 @@ Deliver:
 
 *   [ ] Working code in the `src/` folder.
 *   [ ] Note any relevant and interesting events that happened while you wrote the code.
+  *   One thing that was interesting was how i caught on to the tests and how both the annual files had
+    * a lot of commas and a lot of quotes. I had to strip a lot of them.
 *   [ ] **Tag** the last commit in this phase `implemented` and push it to GitLab.
 
 
@@ -183,9 +204,6 @@ Your grade depends on how your program performs when run from the command line. 
 Deliver:
 
 *   [ ] A set of test cases that you have personally run on your computer.
-    *   Write your test cases in plain language such that a non-coder could run them and replicate your experience.
-    *   Include a description of what happened for *each test case*.
-    *   For any bugs discovered, describe their cause and remedy.
 *   [ ] **Tag** the last commit in this phase `tested` and push it to GitLab.
 
 

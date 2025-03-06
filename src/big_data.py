@@ -25,28 +25,34 @@ import sys
 import time
 
 from report import Report
-print("TODO: import functions from the other modules")  # DELETE ME
+from area_titles import area_titles_to_dict
+from util import record_matches_fips, record_is_all_industries, record_is_software_industry
 
-
-print("TODO: If sys.argv[1] is not given, print a usage message and exit")  # DELETE ME
+if len(sys.argv) != 2:
+    print("Usage: src/big_data.py DATA_DIRECTORY")
+    sys.exit()
 
 print("Reading the databases...", file=sys.stderr)
 before = time.time()
 
-print("TODO: Create a dictionary from 'sys.argv[1]/area-titles.csv'")  # DELETE ME
-print("TODO: If accessing 'sys.argv[1]/area-titles.csv' fails, let your program crash here")  # DELETE ME
-print("TODO: The FIPS dictionary should contain 3,463 pairs")  # DELETE ME
+datadir = sys.argv[1]
+areas = area_titles_to_dict(datadir)
 
 # Create an empty Report object
 rpt = Report()
 
-print("TODO: Fill in the report object with information taken from the annual singlefile CSV")  # DELETE ME
-print("TODO: Read the unit tests to learn how to do that")  # DELETE ME
+annual_file = f"{datadir}/2023.annual.singlefile.csv"
+f = open(annual_file)
+for line in f:
+    record = line.split(",")
+    if record_matches_fips(record, areas) and record_is_all_industries(record):
+        rpt.all.add_record(record, areas)
+    elif record_is_software_industry(record):
+        rpt.soft.add_record(record, areas)
+
 
 after = time.time()
 print(f"Done in {after - before:.3f} seconds!", file=sys.stderr)
 
 # Print the completed report
 print(rpt)
-
-print("TODO: Did you delete all of the TODO messages?")  # DELETE ME
