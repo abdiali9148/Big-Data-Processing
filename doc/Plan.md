@@ -204,6 +204,25 @@ Your grade depends on how your program performs when run from the command line. 
 Deliver:
 
 *   [ ] A set of test cases that you have personally run on your computer.
+    *   *   ill start by each function that gave me trouble.
+      * get_fips
+        * after playing with this function for a bit, the trouble i was having was that it was 
+          * still keeping the quotes in the fips code. so i had to strip them using .strip('"')
+      * record_is_all_industries and record_is_software_industry
+        * the same thing for this, i had to strip the quotes out of "0" and "10"
+      * area_titles_to_dict
+        * the first thing i messed up was not adding a variable to create a dictionary.
+          * this was the biggest thing because the function returns a dictionary.
+        * also one big problem while testing was the fips and area needed to be stripped.
+          * the fips needed to stripped of the quotes
+          * the area needed to be stripped of every white space and the quotes they still had.
+            * the area one confused me because i thought only the fips had quotes.
+      * Industry_data and big_data worked easily.
+    * the one thing messing up the output was in are_titles
+      * fields = line.split(",")
+        * line.split wants to split up everything instead of stoping after that ","
+          * to get it to stop after only one split, i looked at the function.
+            * one of its parameters was "max.split". i set this to 1 so it only split it once per line.
 *   [ ] **Tag** the last commit in this phase `tested` and push it to GitLab.
 
 
