@@ -232,7 +232,7 @@ Phase 4: Deployment (tag name `deployed`)
 
 Deliver:
 
-*   [ ] **Tag** the last commit in this phase `deployed` and push it to GitLab.
+*   [ ] **Tag** the last commit in this phase `deployed` and push it to GitLab. ok
 *   [ ] Your repository is pushed to GitLab.
 *   [ ] **Verify** that your final commit was received by browsing to its project page on GitLab.
     *   Ensure the project's URL is correct.

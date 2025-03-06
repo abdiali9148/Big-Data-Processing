@@ -45,10 +45,11 @@ annual_file = f"{datadir}/2023.annual.singlefile.csv"
 f = open(annual_file)
 for line in f:
     record = line.split(",")
-    if record_matches_fips(record, areas) and record_is_all_industries(record):
-        rpt.all.add_record(record, areas)
-    elif record_is_software_industry(record):
-        rpt.soft.add_record(record, areas)
+    if record_matches_fips(record, areas):
+        if record_is_all_industries(record):
+            rpt.all.add_record(record, areas)
+        elif record_is_software_industry(record):
+            rpt.soft.add_record(record, areas)
 
 
 after = time.time()

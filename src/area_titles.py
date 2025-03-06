@@ -25,13 +25,14 @@ def area_titles_to_dict(dirname):
     the specified directory, and transforms it into a dictionary
     """
     areas = {}
-    f = open(f"{dirname}/area-titles.csv")
+    file = f"{dirname}/area-titles.csv"
+    f = open(file)
     for line in f:
         fields = line.split(",", 1)
         fips = fields[0].strip('"')
-        area = fields[1].strip().strip('"')
+        title = fields[1].strip().strip('"')
         if len(fips) == 5 and fips.isdigit() and not fips.endswith("000"):
-            areas[fips] = area
+            areas[fips] = title
     return areas
 
 
