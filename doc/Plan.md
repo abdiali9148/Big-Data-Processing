@@ -51,22 +51,21 @@ Deliver:
                       emplvl(record) Extracts the Annual average of monthly employment levels from a record.  Returns an integer.
                 
                   return an integer of the 10th index in record. record[9] in python
-            
-            ```
+                  ```
         * for estabs it says the same thing as emplvl but the quarterly establishment counts
           * im thinking i do the same thing but since the maximum in the QCEW records is 8 for estabs, 
             * i will return the integer value at the 8th index.
             * ```python
                 return an integer of the 11th integer in record.
                     needs an integer because of said project requirements.
-            ```
+                    ```
         * for the get_fips, i had to look at the self.all_ind_10_good in the tests.
              * there are 2 indexes that could match the fips code. 0 and 10. 
           * since this function returns a string. ill probably use index 0 because it closely matches it.
             * ```python
                 return the first index of record. so record[0]
                     no int because fips returns a string.
-            ```
+                    ```
         * get_wages.
           *  since i have planned the last 3, i have noticed a pattern with the test.
             * self.assertEqual(59925, get_wages(self.all_ind_10_good))
@@ -75,7 +74,7 @@ Deliver:
               * ```python
                     return an integer of the 11th integer in record.
                         int because wages returns an integer
-            ```
+                        ```
     * These last 3 only return True
         * record_is_all_industries
           * Records pertaining to "all industries" include a reportable FIPS area
@@ -85,18 +84,19 @@ Deliver:
               * this is true when record is the 2nd and 3rd indexes.
               
             * ```python
-                return true if the 2nd index of record is 0 and the 3rd index of record is 10.
-             ```
+                    return true if the 2nd index of record is 0 and the 3rd index of record is 10.
+                    ```
       * record_is_software_industry
         * same as all industries but returns true if the industry code is 513210 and ownership code is 5.
         * this one has a different list self.software_513210_good. so itll have the same code as all industries.
         * ```python
-            return true if the 2nd index of record is 5 and the 3rd index is 513210
-        ```
+                return true if the 2nd index of record is 5 and the 3rd index is 513210
+                ```
         
       * record_matches_fips
       ```python
-      check to see if the get_fips record is in the area. if it is, return True```
+           check to see if the get_fips record is in the area. if it is, return True
+           ```
   
   * area_titles.py
         * the first thing i know about this is that i have to filter out some citys or countrys.
@@ -126,12 +126,10 @@ Deliver:
         *  for the parameters, they all have to start with self.
         * Integers are initialized to 0 Strings are initialized to ""
         ``` python
-        
         set self num_areas to be an integer so ill start it at 0.
         total_annual_wages is 0
         total_estabs is 0
         total_emplvl is 0
-    
         ```
       * these 3 are lists
         ```python
@@ -153,8 +151,7 @@ Deliver:
       Update maximum establishments if this record's establishment count is greater.
       
       Update maximum employment level if this record's employment level is greater.
-    ``` 
-    
+    ```
   * big_data
      ```python
         first thing in this file is to check if there is no file given.
@@ -166,13 +163,14 @@ Deliver:
         hard code the annual csv file
         open the file.
         read each line.
-    * I see the annual file is a record seperated by commas so i am going to seperate it.
+        * I see the annual file is a record seperated by commas so i am going to seperate it.
             split the record of each thing in the list by (",").
             if the fips match the record and the areas and the record is in all the industries
                 then add the record to the report. all
             else if the software industry is in the record
                 add the record to the report."soft" for software industries
-  ```
+        ```
+  
 *   [ ] Explain what happens in the face of good and bad input.
 *  In good input, the report should print, in bad input it should crash or give a USAGE.
     *   As you think of specific examples, write them under **Phase 3** so you can run them as soon as the program is functional.
@@ -255,15 +253,20 @@ Deliver:
 
 *   [ ] Write brief and honest answers to these questions:
     *   What parts of your program are sloppily written and hard to understand?
+          * I don't think any of my code is sloppily written. the only one i can think of is maybe industry_data.py
         *   Are there parts of your program which you aren't quite sure how/why they work?
+          * I understood every part of it thanks to the unit tests.
         *   If a bug is reported in a few months, how long would it take you to find the cause?
+          * pretty quick.
     *   Will your documentation make sense to...
-        *   ...anybody besides yourself?
-        *   ...yourself in six month's time?
+        *   It was very hard getting the python code markups so that might be sloppily written.
+          * it probably would only make sense to me.
     *   How easy will it be to add a new feature to this program in a year?
+      * i would say a little more than medium. I would have to return back to this and read all of it and understand it all again.
     *   Will your program continue to work after upgrading...
-        *   ...your computer's hardware?
-        *   ...the operating system?
-        *   ...to the next version of Python?
+      * i think it will still work because it is very simple.
+          *   ...your computer's hardware?
+          *   ...the operating system?
+          *   ...to the next version of Python?
 *   [ ] Make one final commit and push your **completed** Software Development Plan to GitLab.
 *   [ ] Respond to the **Project Reflection Survey** on Canvas.
